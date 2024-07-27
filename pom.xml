@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  	<modelVersion>4.0.0</modelVersion>
+  	<groupId>com.tkpm</groupId>
+  	<artifactId>FlightManager</artifactId>
+  	<version>0.0.1-SNAPSHOT</version>
+  
+	<properties>
+		<hibernate.version>5.6.5.Final</hibernate.version>
+		<mysql.connector.version>5.1.45</mysql.connector.version>
+		<lgooddatepicker.version>11.2.1</lgooddatepicker.version>
+		<jgoodies-forms.version>1.8.0</jgoodies-forms.version>
+		<flatlaf.version>2.3</flatlaf.version>
+	</properties>
+  
+  	<dependencies>
+  	
+		<!-- Hibernate -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+		
+		<!-- MySQL -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.connector.version}</version>
+		</dependency>
+		
+		<!-- Date and time picker for UI -->	
+		<dependency>
+  			<groupId>com.github.lgooddatepicker</groupId>
+  			<artifactId>LGoodDatePicker</artifactId>
+  			<version>${lgooddatepicker.version}</version>
+		</dependency>	
+		
+		<!-- Support Form Layout -->
+		<dependency>
+    		<groupId>com.jgoodies</groupId>
+    		<artifactId>jgoodies-forms</artifactId>
+    		<version>${jgoodies-forms.version}</version>
+		</dependency>
+		
+		<!-- For Look & Feel decorated -->
+		<dependency>
+		    <groupId>com.formdev</groupId>
+			<artifactId>flatlaf</artifactId>
+			<version>${flatlaf.version}</version>
+		</dependency>
+		
+	</dependencies>
+	
+</project>

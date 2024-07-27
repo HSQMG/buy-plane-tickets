@@ -1,1 +1,1 @@
-# buy-plane-tickets
+# For Swing + Hibernate project in "Software Design" course
