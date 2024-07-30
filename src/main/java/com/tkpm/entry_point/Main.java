@@ -9,7 +9,7 @@ import com.tkpm.controller.LoginController;
 public class Main {
 
 	public static void main(String[] args) {
-
+		
 		try {
 			UIManager.setLookAndFeel(new FlatIntelliJLaf());
 			UIManager.put("Component.arrowType", "chevron");
@@ -19,6 +19,7 @@ public class Main {
 
 		LoginController controller = new LoginController();
 		controller.run();
+		
 	}
 
 }

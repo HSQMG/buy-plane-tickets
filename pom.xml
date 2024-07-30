@@ -5,12 +5,12 @@
   	<version>0.0.1-SNAPSHOT</version>
   
 	<properties>
-		<hibernate.version>5.6.5.Final</hibernate.version>
-		<mysql.connector.version>5.1.45</mysql.connector.version>
-		<lgooddatepicker.version>11.2.1</lgooddatepicker.version>
-		<jgoodies-forms.version>1.8.0</jgoodies-forms.version>
-		<flatlaf.version>2.3</flatlaf.version>
-	</properties>
+    <hibernate.version>5.6.10.Final</hibernate.version> 
+    <mysql.connector.version>8.0.30</mysql.connector.version>
+    <lgooddatepicker.version>11.2.0</lgooddatepicker.version>
+    <jgoodies-forms.version>1.6.0</jgoodies-forms.version>
+    <flatlaf.version>2.4</flatlaf.version> 
+</properties>
   
   	<dependencies>
   	
@@ -23,9 +23,9 @@
 		
 		<!-- MySQL -->
 		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>${mysql.connector.version}</version>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.3.1</version> <!-- Kiểm tra và sử dụng phiên bản mới nhất -->
 		</dependency>
 		
 		<!-- Date and time picker for UI -->	
@@ -46,9 +46,37 @@
 		<dependency>
 		    <groupId>com.formdev</groupId>
 			<artifactId>flatlaf</artifactId>
-			<version>${flatlaf.version}</version>
+			<version>2.0</version>
 		</dependency>
 		
 	</dependencies>
-	
+    <build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-assembly-plugin</artifactId>
+            <version>3.3.0</version>
+            <configuration>
+                <archive>
+                    <manifest>
+                        <mainClass>com.tkpm.entry_point.Main</mainClass>
+                    </manifest>
+                </archive>
+                <descriptorRefs>
+                    <descriptorRef>jar-with-dependencies</descriptorRef>
+                </descriptorRefs>
+            </configuration>
+            <executions>
+                <execution>
+                    <id>make-assembly</id>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>single</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+</build>
+
 </project>

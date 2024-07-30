@@ -82,8 +82,8 @@ public class Login extends BaseFrame implements FormBehaviour {
 		contentPanel.setLayout(new GridLayout(0, 2, 0, 0));
 		
 		Background = new JLabel("");
-		ImageIcon icon = new ImageIcon(getClass().getResource("/path/to/image.png"));
 		Background.setIcon(new ImageIcon(Login.class.getResource("/com/tkpm/view/frame/form/rafiki.jpg")));
+
 		Background.setHorizontalAlignment(SwingConstants.CENTER);
 		
 		panelInfo = new JPanel();

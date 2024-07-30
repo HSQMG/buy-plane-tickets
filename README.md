@@ -1,1 +1,0 @@
-# For Swing + Hibernate project in "Software Design" course
